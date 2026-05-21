@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "/Page_1_Menu"
+      "destination": "/Page_1_Menu/",
+      "permanent": false
     }
   ]
 }
