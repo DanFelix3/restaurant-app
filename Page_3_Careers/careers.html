@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice Junction - Careers</title>
+  <link rel="stylesheet" href="careers.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <h1>Spice Junction</h1>
+      <p>Authentic Indian Flavours Since 2005</p>
+    </div>
+    <nav>
+      <a href="../Page_1_Menu/index.html">Menu</a>
+      <a href="../Page_2_About/index.html">About</a>
+      <a href="careers.html" class="active">Careers</a>
+      <a href="admin.html" >Admin Login</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Join Our Team</h2>
+    <p>Be part of a kitchen that runs on passion, flavour, and heart.</p>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <main class="form-wrap">
+    <h3 class="form-title">Job Application</h3>
+    <p class="form-sub">Fill in the form below and we'll get back to you within 3 working days.</p>
+
+    <!-- Success / Error banners (hidden by default) -->
+    <div class="banner success" id="successMsg" style="display:none;">
+      Application submitted successfully! We'll be in touch soon.
+    </div>
+    <div class="banner error" id="errorMsg" style="display:none;"></div>
+
+    <form id="appForm" novalidate>
+
+      <!-- Full Name -->
+      <div class="field">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" placeholder="e.g. Daniel Felix" />
+        <span class="err" id="err-fullName"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="you@example.com" />
+        <span class="err" id="err-email"></span>
+      </div>
+
+      <!-- Phone -->
+      <div class="field">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" placeholder="10-digit mobile number" />
+        <span class="err" id="err-phone"></span>
+      </div>
+
+      <!-- Position -->
+      <div class="field">
+        <label for="position">Position Applied For *</label>
+        <select id="position">
+          <option value="">-- Select a position --</option>
+          <option>Chef</option>
+          <option>Waiter</option>
+          <option>Manager</option>
+          <option>Delivery</option>
+          <option>Cashier</option>
+        </select>
+        <span class="err" id="err-position"></span>
+      </div>
+
+      <!-- Experience -->
+      <div class="field">
+        <label for="experience">Years of Experience</label>
+        <input type="number" id="experience" min="0" placeholder="0" />
+        <span class="err" id="err-experience"></span>
+      </div>
+
+      <!-- Why Hire -->
+      <div class="field">
+        <label for="reason">Why should we hire you? * <small>(min. 20 characters)</small></label>
+        <textarea id="reason" rows="4" placeholder="Tell us about yourself..."></textarea>
+        <span class="err" id="err-reason"></span>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Submit Application</button>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p></p><strong>Spice Junction</strong> &nbsp;|&nbsp; © 2025 All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Zomato</a>
+    </div>
+  </footer>
+
+  <script type="module" src="careers.js"></script>
+</body>
+</html>

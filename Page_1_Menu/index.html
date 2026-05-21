@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice Junction - Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <h1>Spice Junction</h1>
+      <p>Authentic Indian Flavours Since 2005</p>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Menu</a>
+      <a href="../Page_2_About/index.html">About</a>
+      <a href="../Page_3_Careers/careers.html">Careers</a>
+      <a href="../Page_3_Careers/admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <!-- FILTERS -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-cat="All">All</button>
+    <button class="filter-btn" data-cat="Starters">Starters</button>
+    <button class="filter-btn" data-cat="Main Course">Main Course</button>
+    <button class="filter-btn" data-cat="Biryani">Biryani</button>
+    <button class="filter-btn" data-cat="Desserts">Desserts</button>
+    <button class="filter-btn" data-cat="Beverages">Beverages</button>
+  </div>
+
+  <!-- CARD GRID -->
+  <main class="card-grid" id="cardGrid"></main>
+
+  <!-- STICKY CART BAR -->
+  <div class="cart-bar" id="cartBar" style="display:none;">
+    <div class="cart-summary" id="cartSummary" onclick="toggleCart()">
+      <img src="assets/svg/cart_svg.svg">
+      <span id="cartCount">0</span> items &nbsp;|&nbsp; ₹<span id="cartTotal">0</span>
+      <span id="cartHint" style="float:right; font-size:0.8rem;">▲ View details</span>
+    </div>
+    <div class="cart-details" id="cartDetails"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

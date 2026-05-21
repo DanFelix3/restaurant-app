@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice Junction - Admin</title>
+  <link rel="stylesheet" href="careers.css"/>
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <h1>Spice Junction</h1>
+      <p>Admin Panel</p>
+    </div>
+    <nav>
+      <a href="../Page_1_Menu/index.html">Menu</a>
+      <a href="../Page_2_About/index.html">About</a>
+      <a href="careers.html">Careers</a>
+      <a href="admin.html" class="active">Admin</a>
+      <!-- Logout button shown only when logged in -->
+      <button class="logout-btn" id="logoutBtn" style="display:none;" onclick="handleLogout()">Logout</button>
+    </nav>
+  </header>
+
+  <!-- LOGIN FORM (shown by default) -->
+  <main class="form-wrap" id="loginSection">
+    <h3 class="form-title">Admin Login</h3>
+    <p class="form-sub">Sign in to view all job applications.</p>
+
+    <div class="banner error" id="loginError" style="display:none;"></div>
+
+    <div class="field">
+      <label for="adminEmail">Email</label>
+      <input type="email" id="adminEmail" placeholder="admin@spicejunction.in"/>
+    </div>
+    <div class="field">
+      <label for="adminPassword">Password</label>
+      <input type="password" id="adminPassword" placeholder="••••••••"/>
+    </div>
+    <button class="submit-btn" id="loginBtn" onclick="handleLogin()">Login</button>
+  </main>
+
+  <!-- DASHBOARD (hidden until logged in) -->
+  <main class="dashboard" id="dashboard" style="display:none;">
+    <div class="dash-header">
+      <h3>Job Applications</h3>
+      <span id="appCount" class="app-count"></span>
+    </div>
+
+    <div id="tableWrap">
+      <p id="loadingMsg">Loading applications...</p>
+      <p id="emptyMsg"   style="display:none;">No applications received yet.</p>
+
+      <div class="table-scroll">
+        <table class="app-table" id="appTable" style="display:none;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Position</th>
+              <th>Exp (yrs)</th>
+              <th>Reason</th>
+              <th>Submitted At</th>
+            </tr>
+          </thead>
+          <tbody id="appTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

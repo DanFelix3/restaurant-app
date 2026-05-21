@@ -1,0 +1,71 @@
+/* Admin-specific styles on top of careers.css */
+
+.dashboard {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.dash-header h3 { font-size: 1.3rem; color: var(--maroon); }
+
+.app-count {
+  background: var(--maroon);
+  color: #fff;
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* Logout button in nav */
+.logout-btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 5px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.logout-btn:hover { background: rgba(255,255,255,0.25); }
+
+/* Table */
+.table-scroll { overflow-x: auto; }
+
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.app-table th {
+  background: var(--maroon);
+  color: var(--white);
+  padding: 10px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+.app-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.app-table tr:last-child td { border-bottom: none; }
+.app-table tr:nth-child(even) td { background: #fdf6f6; }
+.app-table td:nth-child(7) { max-width: 200px; font-size: 0.8rem; color: var(--muted); }
+
+#loadingMsg, #emptyMsg {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem;
+  font-size: 0.95rem;
+}
